@@ -1,5 +1,3 @@
-/* /src/styles/App.css */
-
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
@@ -8,6 +6,7 @@ body {
 }
 
 .app {
+  height: 100vh;
   max-width: 100vw;
   padding: 20px;
   background-color: #fff;
