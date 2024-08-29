@@ -16,7 +16,7 @@ The main UI component that displays the reward points for each customer. It take
 
 ## Utils
 
-# calculateRewardPoints:
+# CalculateRewardPoints:
 
 Contains the logic for calculating reward points based on the transaction amount. This function is reused across the application to ensure consistent calculations.
 
@@ -27,6 +27,8 @@ Contains the logic for calculating reward points based on the transaction amount
 The reward sercice function processes a list of transactions to calculate the reward points earned by each customer. It organizes the points into two categories: monthlyPoints, which tracks points earned per customer each month, and totalPoints, which tracks the cumulative points earned by each customer across all transactions
 
 ## Testing
+
+# App.test.js:
 
 The project includes unit tests using React Testing Library to ensure the application works correctly. The tests cover:
 
