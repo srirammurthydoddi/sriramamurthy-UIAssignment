@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import CustomerRewardPoints from "./components/CustomerRewardPoints";
+import Loader from "./components/Loader";
+import { useFetchTransactions } from "./api/useFetchTransactions";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const { transactions, loading, error } = useFetchTransactions();
+
+  if (loading) return <Loader />;
+  if (error) return <div>Error: {error}</div>;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1>Customer Rewards Program</h1>
+      <CustomerRewardPoints transactions={transactions} />
     </div>
   );
-}
+};
 
 export default App;
